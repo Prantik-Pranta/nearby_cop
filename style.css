@@ -1,0 +1,142 @@
+/* ── Reset & Base ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* ── Page container ── */
+.container {
+  width: 100%;
+  max-width: 480px;
+  padding: 24px 16px;
+}
+
+/* ── Header: branding + pin icon ── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.brand {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #7FE5E0;
+  letter-spacing: 2px;
+}
+
+.pin-icon {
+  display: flex;
+  align-items: center;
+  /* Slight drop-shadow to make the yellow pop on light background */
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* ── Card ── */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px 36px 36px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Form ── */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1.5px solid #d0d0d0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #333;
+  background: #fafafa;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input::placeholder {
+  color: #aaa;
+}
+
+.form-input:focus {
+  border-color: #7FE5E0;
+  box-shadow: 0 0 0 3px rgba(127, 229, 224, 0.25);
+  background: #fff;
+}
+
+/* ── Login button ── */
+.btn-login {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background-color: #7FE5E0;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-login:hover {
+  background-color: #5dd6d0;
+}
+
+.btn-login:active {
+  transform: scale(0.98);
+}
+
+/* ── Sign-up link ── */
+.signup-link {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.signup-link a {
+  color: #7FE5E0;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.signup-link a:hover {
+  color: #5dd6d0;
+  text-decoration: underline;
+}
+
+/* ── Responsive adjustments ── */
+@media (max-width: 480px) {
+  .brand {
+    font-size: 2.4rem;
+  }
+
+  .card {
+    padding: 30px 20px 28px;
+  }
+}
